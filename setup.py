@@ -30,7 +30,7 @@ setup(
     include_package_data=True,
     # This lets setuptools include_package_data work with git
     setup_requires=["setuptools_git >= 0.3"],
-    packages=find_packages('myscipkg2'),
+    packages=find_packages(),
 
     # Add requirements here. If the requirement is difficult to install,
     # add to docs/conf.py MAGIC_MOCK, and .travis.yml 'conda install ...'
