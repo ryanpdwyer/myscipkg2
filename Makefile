@@ -44,7 +44,7 @@ docs:
 	$(MAKE) -C docs html
 	open docs/_build/html/index.html
 
-release: clean test check-version
+release: clean test check-version check-git-version
 	python setup.py sdist bdist_wheel
 	twine upload dist/*
 
