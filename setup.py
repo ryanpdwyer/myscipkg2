@@ -19,7 +19,7 @@ history = io.open('HISTORY.rst', mode='r',
 
 setup(
     name='myscipkg2',
-    version='0.1.0',
+    version='0.1.2',
     description='A package for science using numpy, matplotlib, readthedocs, etc.',
     long_description=readme + '\n\n' + doclink + '\n\n',
     license='MIT',

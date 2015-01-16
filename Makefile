@@ -51,7 +51,7 @@ release: clean test check-version check-git-version
 # Check version string for PEP440 compatibility
 # Requires the packaging package (pip install packaging)
 check-version:
-	python -c "from packaging.version import Version; Version('$VERSION')"
+	python -c "from packaging.version import Version; Version('$(VERSION)')"
 	@echo "Version okay."
 
 
