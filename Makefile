@@ -44,7 +44,7 @@ docs:
 	$(MAKE) -C docs html
 	open docs/_build/html/index.html
 
-release: clean test check-version check-git-version
+release: clean test check-version check-version-tag
 	python setup.py sdist bdist_wheel
 	twine upload dist/*
 
@@ -68,4 +68,4 @@ endif
 find-imports:
 	find $(PKG_DIR) -name "*.py" -exec fgrep "import" {} \; |  egrep '^(\s*)(import|from)' | sed 's/^\s+//' | tr -s ' ' | cut -d " " -f 2 | fgrep -v $(PKG_NAME) | sort -u | uniq
 
-.PHONY: help clean clean-pyc check-version clean-build list test coverage docs release sdist
+.PHONY: help clean clean-pyc check-version clean-build list test coverage docs release check-version-tag
